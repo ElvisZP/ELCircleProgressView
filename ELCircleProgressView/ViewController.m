@@ -34,7 +34,7 @@
 - (IBAction)clickButton2:(id)sender {
     CGFloat progress = self.progressView.progress;
     progress += 0.1;
-    self.progressView.progress = progress;
+    [self.progressView setProgressInDefaultModel:progress withAnimation:true];
     
 }
 - (IBAction)clickButton3:(id)sender {

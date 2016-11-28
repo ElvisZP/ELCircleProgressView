@@ -13,7 +13,6 @@
 
 @property(nonatomic, strong) CAShapeLayer *backLayer;
 @property(nonatomic, strong) CAShapeLayer *circleLayer;
-
 @end
 
 @implementation ELCircleProgressView
@@ -41,7 +40,7 @@
 }
 
 -(void)prepareForInterfaceBuilder{
-    _lineWidth = 10;
+    _lineWidth = 5;
     _backStrokeColor = [UIColor grayColor];
     _foreStrokeColor = [UIColor whiteColor];
     _startAngle = -0.5 * M_PI;
@@ -67,7 +66,7 @@
     [self.layer addSublayer:self.backLayer];
     [self.layer addSublayer:self.circleLayer];
     
-    _lineWidth = 10;
+    _lineWidth = 5;
     _backStrokeColor = [UIColor grayColor];
     _foreStrokeColor = [UIColor whiteColor];
     _startAngle = -0.5*M_PI;
@@ -101,23 +100,46 @@
     CGFloat height = self.frame.size.height  - self.lineWidth;
     return [UIBezierPath bezierPathWithArcCenter:CGPointMake(width/2, height/2) radius:width/2 startAngle:self.startAngle endAngle:self.endAngle clockwise:true];
 }
-#pragma mark - getter and setter
 
--(void)setProgress:(CGFloat)progress{
-    if(_progress != progress){
-        _progress = progress;
-        
-        CGFloat start = self.circleLayer.strokeEnd;
-        self.circleLayer.strokeEnd = progress;
-        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-        animation.duration = self.animationDuration;
-        animation.fromValue = [NSNumber numberWithFloat:start];
-        animation.toValue = [NSNumber numberWithFloat:progress];
-        animation.removedOnCompletion = true;
-        [self.circleLayer addAnimation:animation forKey:nil];
-    }
+
+/**
+ 设置进度
+
+ @param progress 进度,范围:0 - 1.0
+ @param ani 是否开启动画
+ */
+-(void)setProgress:(CGFloat)progress withAnimation:(BOOL)ani{
+    _progress = progress;
+    [self changeProgressWithAnimation:ani];
 }
 
+/**
+ 设置进度
+ 运行在Runloop Default Mode下，目的是为了让TableView滑动时不变更进度，防止卡顿
+ @param progress 进度,范围:0 - 1.0
+ @param ani 是否开启动画
+ */
+-(void)setProgressInDefaultModel:(CGFloat)progress withAnimation:(BOOL)ani{
+    _progress = progress;
+    [self performSelector:@selector(changeProgressWithAnimation:) withObject:[NSNumber numberWithBool:ani] afterDelay:0 inModes:@[NSDefaultRunLoopMode]];
+}
+
+-(void)changeProgressWithAnimation:(BOOL)ani{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CGFloat start = self.circleLayer.strokeEnd;
+        self.circleLayer.strokeEnd = self.progress;
+        if(ani){
+            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+            animation.duration = self.animationDuration;
+            animation.fromValue = [NSNumber numberWithFloat:start];
+            animation.toValue = [NSNumber numberWithFloat:self.progress];
+            animation.removedOnCompletion = true;
+            [self.circleLayer addAnimation:animation forKey:nil];
+        }
+    });
+}
+
+#pragma mark - getter and setter
 -(void)setBackStrokeColor:(UIColor *)backStrokeColor{
     if(_backStrokeColor != backStrokeColor){
         _backStrokeColor = backStrokeColor;
