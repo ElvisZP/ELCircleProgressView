@@ -1,5 +1,7 @@
 # ELCircleProgressView
 
+https://elviszp.github.io/2016/11/29/2016-11-28%20ELProgressView备忘/#more
+
 使用方式：
 
 ```
