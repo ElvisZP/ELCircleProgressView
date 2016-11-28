@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E8935161DEC6963003001CA /* ELTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8935151DEC6963003001CA /* ELTableViewController.m */; };
+		6E8935191DEC6A00003001CA /* ELProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8935181DEC6A00003001CA /* ELProgressCell.m */; };
 		6EC5918B1DEC178100F56EB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5918A1DEC178100F56EB9 /* main.m */; };
 		6EC5918E1DEC178100F56EB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC5918D1DEC178100F56EB9 /* AppDelegate.m */; };
 		6EC591941DEC178100F56EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EC591921DEC178100F56EB9 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 		6EC591AF1DEC178100F56EB9 /* ELCircleProgressViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC591AE1DEC178100F56EB9 /* ELCircleProgressViewUITests.m */; };
 		6EC591C11DEC17C000F56EB9 /* ELCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC591BE1DEC17C000F56EB9 /* ELCircleProgressView.m */; };
 		6EC591C21DEC17C000F56EB9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC591C01DEC17C000F56EB9 /* ViewController.m */; };
+		6EC591C51DEC5B3200F56EB9 /* ELCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC591C41DEC5B3200F56EB9 /* ELCustomViewController.m */; };
+		6EC591C81DEC650400F56EB9 /* ELXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC591C71DEC650400F56EB9 /* ELXibViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E8935141DEC6963003001CA /* ELTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELTableViewController.h; sourceTree = "<group>"; };
+		6E8935151DEC6963003001CA /* ELTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELTableViewController.m; sourceTree = "<group>"; };
+		6E8935171DEC6A00003001CA /* ELProgressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELProgressCell.h; sourceTree = "<group>"; };
+		6E8935181DEC6A00003001CA /* ELProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELProgressCell.m; sourceTree = "<group>"; };
 		6EC591861DEC178100F56EB9 /* ELCircleProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ELCircleProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC5918A1DEC178100F56EB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6EC5918C1DEC178100F56EB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +62,10 @@
 		6EC591BE1DEC17C000F56EB9 /* ELCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCircleProgressView.m; sourceTree = "<group>"; };
 		6EC591BF1DEC17C000F56EB9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6EC591C01DEC17C000F56EB9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6EC591C31DEC5B3200F56EB9 /* ELCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCustomViewController.h; sourceTree = "<group>"; };
+		6EC591C41DEC5B3200F56EB9 /* ELCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCustomViewController.m; sourceTree = "<group>"; };
+		6EC591C61DEC650400F56EB9 /* ELXibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELXibViewController.h; sourceTree = "<group>"; };
+		6EC591C71DEC650400F56EB9 /* ELXibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELXibViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,14 @@
 				6EC591C01DEC17C000F56EB9 /* ViewController.m */,
 				6EC5918C1DEC178100F56EB9 /* AppDelegate.h */,
 				6EC5918D1DEC178100F56EB9 /* AppDelegate.m */,
+				6EC591C31DEC5B3200F56EB9 /* ELCustomViewController.h */,
+				6EC591C41DEC5B3200F56EB9 /* ELCustomViewController.m */,
+				6EC591C61DEC650400F56EB9 /* ELXibViewController.h */,
+				6EC591C71DEC650400F56EB9 /* ELXibViewController.m */,
+				6E8935141DEC6963003001CA /* ELTableViewController.h */,
+				6E8935151DEC6963003001CA /* ELTableViewController.m */,
+				6E8935171DEC6A00003001CA /* ELProgressCell.h */,
+				6E8935181DEC6A00003001CA /* ELProgressCell.m */,
 				6EC591921DEC178100F56EB9 /* Main.storyboard */,
 				6EC591951DEC178100F56EB9 /* Assets.xcassets */,
 				6EC591971DEC178100F56EB9 /* LaunchScreen.storyboard */,
@@ -287,9 +307,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EC5918E1DEC178100F56EB9 /* AppDelegate.m in Sources */,
+				6E8935191DEC6A00003001CA /* ELProgressCell.m in Sources */,
+				6EC591C51DEC5B3200F56EB9 /* ELCustomViewController.m in Sources */,
 				6EC5918B1DEC178100F56EB9 /* main.m in Sources */,
+				6E8935161DEC6963003001CA /* ELTableViewController.m in Sources */,
 				6EC591C21DEC17C000F56EB9 /* ViewController.m in Sources */,
 				6EC591C11DEC17C000F56EB9 /* ELCircleProgressView.m in Sources */,
+				6EC591C81DEC650400F56EB9 /* ELXibViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +545,7 @@
 				6EC591B51DEC178100F56EB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EC591B61DEC178100F56EB9 /* Build configuration list for PBXNativeTarget "ELCircleProgressViewTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +554,7 @@
 				6EC591B81DEC178100F56EB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EC591B91DEC178100F56EB9 /* Build configuration list for PBXNativeTarget "ELCircleProgressViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +563,7 @@
 				6EC591BB1DEC178100F56EB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

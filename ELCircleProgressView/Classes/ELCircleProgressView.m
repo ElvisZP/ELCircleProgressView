@@ -41,11 +41,13 @@
 
 -(void)prepareForInterfaceBuilder{
     _lineWidth = 5;
-    _backStrokeColor = [UIColor grayColor];
-    _foreStrokeColor = [UIColor whiteColor];
+    _backStrokeColor = [UIColor colorWithRed:0.31 green:0.31 blue:0.31 alpha:1.00];
+    _foreStrokeColor = [UIColor colorWithRed:0.26 green:0.56 blue:0.86 alpha:1.00];
     _startAngle = -0.5 * M_PI;
     _endAngle = 1.5 * M_PI;
     _animationDuration = 1.0;
+    
+    [self layoutIfNeeded];
 }
 
 #pragma mark - private
@@ -57,18 +59,20 @@
     self.backLayer.fillColor = [UIColor clearColor].CGColor;
     self.backLayer.lineCap = kCALineCapRound;
     self.backLayer.lineJoin = kCALineJoinRound;
+    self.backLayer.borderColor = [UIColor clearColor].CGColor;
     self.circleLayer = [[CAShapeLayer alloc] init];
     self.circleLayer.strokeEnd = 0;
     self.circleLayer.strokeStart = 0;
     self.circleLayer.fillColor = [UIColor clearColor].CGColor;
     self.circleLayer.lineCap = kCALineCapRound;
     self.circleLayer.lineJoin = kCALineJoinRound;
+    self.circleLayer.borderColor = [UIColor clearColor].CGColor;
     [self.layer addSublayer:self.backLayer];
     [self.layer addSublayer:self.circleLayer];
     
     _lineWidth = 5;
-    _backStrokeColor = [UIColor grayColor];
-    _foreStrokeColor = [UIColor whiteColor];
+    _backStrokeColor = [UIColor colorWithRed:0.31 green:0.31 blue:0.31 alpha:1.00];
+    _foreStrokeColor = [UIColor colorWithRed:0.26 green:0.56 blue:0.86 alpha:1.00];
     _startAngle = -0.5*M_PI;
     _endAngle = 1.5*M_PI;
     _animationDuration = 1.0;
